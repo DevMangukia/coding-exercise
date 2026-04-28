@@ -1,0 +1,37 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        LinkedList<String> playlist = new LinkedList<String>();
+
+        playlist.add("Song1");
+        playlist.add("Song2");
+        playlist.add("Song3");
+        playlist.add("Song4");
+
+        System.out.println("Playlist:");
+        for (String song : playlist) {
+            System.out.println(song);
+        }
+
+        System.out.println();
+
+        String first = playlist.removeFirst();
+        System.out.println("Playing: " + first);
+
+        System.out.println("Playlist after playing first song:");
+        for (String song : playlist) {
+            System.out.println(song);
+        }
+
+        System.out.println();
+
+        String last = playlist.removeLast();
+        System.out.println("Skipped: " + last);
+
+        System.out.println("Updated Playlist:");
+        for (String song : playlist) {
+            System.out.println(song);
+        }
+    }
+}
