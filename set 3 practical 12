@@ -1,0 +1,29 @@
+import java.util.*;
+
+class Volume {
+    double calculateVolume(double side) {
+        return side * side * side;
+    }
+
+    double calculateVolume(double l, double w, double h) {
+        return l * w * h;
+    }
+
+    double calculateVolume(int r) {
+        return (4.0 / 3.0) * Math.PI * r * r * r;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Volume v = new Volume();
+
+        double cube = v.calculateVolume(3);
+        double rect = v.calculateVolume(4, 5, 6);
+        double sphere = v.calculateVolume(3);
+
+        System.out.println("Cube Volume: " + cube);
+        System.out.println("Rectangular Cube Volume: " + rect);
+        System.out.println("Sphere Volume: " + sphere);
+    }
+}
