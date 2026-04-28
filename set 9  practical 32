@@ -1,0 +1,25 @@
+import java.util.*;
+
+public class Main {
+    public static <T> boolean searchElement(LinkedList<T> list, T element) {
+        return list.contains(element);
+    }
+
+    public static void main(String[] args) {
+        LinkedList<Integer> rollNos = new LinkedList<Integer>();
+        rollNos.add(101);
+        rollNos.add(102);
+        rollNos.add(103);
+
+        System.out.println(searchElement(rollNos, 102));
+        System.out.println(searchElement(rollNos, 105));
+
+        LinkedList<String> names = new LinkedList<String>();
+        names.add("Amit");
+        names.add("Rahul");
+        names.add("Neha");
+
+        System.out.println(searchElement(names, "Rahul"));
+        System.out.println(searchElement(names, "Kiran"));
+    }
+}
